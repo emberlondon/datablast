@@ -6,7 +6,7 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('welcome');
+  this.route('datablast');
 });
 
 export default Router;
