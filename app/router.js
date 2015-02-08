@@ -18,6 +18,7 @@ Router.map(function() {
   this.route('broccolijs');
   this.route('data-sources');
   this.route('ember-flash');
+  this.route('ember-inspector');
 });
 
 export default Router;

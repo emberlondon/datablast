@@ -10,6 +10,8 @@ export default Ember.Component.extend({
   containerStyle: function() {
     if (!this.get('active')) { return; }
 
+    Ember.Logger.info('db-slide#containerStyle');
+
     let height          = this.get('window.height');
     let container       = this.$('db-slide-container');
     let containerHeight = container.outerHeight(true);

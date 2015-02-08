@@ -20,5 +20,7 @@ export default Ember.Component.extend({
       height: tweet.outerHeight(),
       opacity: 1
     });
+
+    this.window.notifyPropertyChange('height');
   }
 });
