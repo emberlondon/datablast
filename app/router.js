@@ -21,6 +21,7 @@ Router.map(function() {
   this.route('ember-inspector');
   this.route('survey');
   this.route('tom-blog');
+  this.route('one-ten');
 });
 
 export default Router;
