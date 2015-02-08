@@ -30,6 +30,7 @@ Router.map(function() {
   this.route('one-eleven');
   this.route('one-eleven-upgrading');
   this.route('inline-if');
+  this.route('each-with-index');
 });
 
 export default Router;
