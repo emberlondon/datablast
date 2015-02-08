@@ -28,6 +28,7 @@ Router.map(function() {
   this.route('block-params');
   this.route('injected-properties');
   this.route('one-eleven');
+  this.route('one-eleven-upgrading');
 });
 
 export default Router;
