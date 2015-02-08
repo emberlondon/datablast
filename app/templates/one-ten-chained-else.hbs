@@ -1,0 +1,24 @@
+{{#db-slide}}
+  <h2>Ember 1.10</h2>
+  <hr>
+  <h3>Chained <code>\{{else}}</code> blocks</h3>
+  <hr>
+  <p style="margin-bottom: 0.5em">
+    {{#if empty}}
+      Choose a password…
+    {{else}}
+      {{#if tooShort}}
+        Too short :(
+      {{else}}
+        {{#if tooLong}}
+          Too long :(
+        {{else}}
+          Perfect :(
+        {{/if}}
+      {{/if}}
+    {{/if}}
+  </p>
+  <p>
+    {{input type="password" value=password}}
+  </p>
+{{/db-slide}}

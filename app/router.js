@@ -22,6 +22,8 @@ Router.map(function() {
   this.route('survey');
   this.route('tom-blog');
   this.route('one-ten');
+  this.route('one-ten-upgrading');
+  this.route('one-ten-chained-else');
 });
 
 export default Router;
