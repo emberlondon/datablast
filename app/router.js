@@ -15,6 +15,7 @@ Router.map(function() {
   this.route('esnext-6to5');
   this.route('iojs');
   this.route('broccoli-thursdays');
+  this.route('broccolijs');
 });
 
 export default Router;
