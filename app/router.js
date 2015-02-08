@@ -24,7 +24,7 @@ Router.map(function() {
   this.route('tom-blog');
   this.route('one-ten');
   this.route('one-ten-upgrading');
-  this.route('one-ten-chained-else');
+  this.route('chained-else');
 });
 
 export default Router;

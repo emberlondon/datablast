@@ -3,7 +3,7 @@ import {
   test
 } from 'ember-qunit';
 
-moduleFor('controller:one-ten-chained-else', 'OneTenChainedElseController', {
+moduleFor('controller:chained-else', {
   // Specify the other units that are required for this test.
   // needs: ['controller:foo']
 });
