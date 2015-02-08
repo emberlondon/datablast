@@ -19,6 +19,7 @@ Router.map(function() {
   this.route('data-sources');
   this.route('ember-flash');
   this.route('ember-inspector');
+  this.route('survey');
 });
 
 export default Router;
