@@ -89,3 +89,18 @@ x-tweet p {
 .liquid-container, .liquid-child {
   height: 100%;
 }
+
+.demo-box {
+  display: block;
+  width: 100px; height: 100px;
+  margin: 0 auto;
+  background: #ccc;
+}
+
+.demo-box input {
+  visibility: hidden;
+}
+
+.demo-box.is-green {
+  background: green;
+}
