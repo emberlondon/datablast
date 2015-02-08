@@ -44,6 +44,7 @@ Router.map(function() {
   this.route('ember-data');
   this.route('json-api');
   this.route('end');
+  this.route('on-to-the-talks');
 });
 
 export default Router;
