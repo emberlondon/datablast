@@ -1,12 +1,12 @@
 import Ember from 'ember';
-var $ = Ember.$;
+let $ = Ember.$;
 
 export default Ember.Component.extend({
   tagName: 'x-tweet',
 
   insertTweet: function() {
-    var id = this.get('tweetId');
-    var el = this.$('x-tweet-container')[0];
+    let id = this.get('tweetId');
+    let el = this.$('x-tweet-container')[0];
 
     twttr.widgets.createTweet(id, el)
       .then(Ember.run.bind(this, 'reveal'));

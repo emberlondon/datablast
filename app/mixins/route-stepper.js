@@ -4,7 +4,7 @@ export default Ember.Mixin.create({
   init: function() {
     this._super.apply(this, arguments);
 
-    var keyboard = this.get('keyboard');
+    let keyboard = this.get('keyboard');
 
     keyboard.on('left', Ember.run.bind(this, 'prev'));
     keyboard.on('right', Ember.run.bind(this, 'next'));
@@ -17,7 +17,7 @@ export default Ember.Mixin.create({
   currentPath: Ember.computed.readOnly('applicationController.currentPath'),
 
   paths: function() {
-    var paths = Ember.keys(this.router.recognizer.names);
+    let paths = Ember.keys(this.router.recognizer.names);
 
     paths.removeObjects(['loading', 'error', 'index', 'application']);
     paths.unshiftObject('index');
@@ -34,11 +34,11 @@ export default Ember.Mixin.create({
   },
 
   _step: function(m) {
-    var currentPath  = this.get('currentPath');
-    var paths        = this.get('paths');
-    var currentIndex = paths.indexOf(currentPath);
-    var nextIndex    = currentIndex + m;
-    var nextPath     = paths[nextIndex];
+    let currentPath  = this.get('currentPath');
+    let paths        = this.get('paths');
+    let currentIndex = paths.indexOf(currentPath);
+    let nextIndex    = currentIndex + m;
+    let nextPath     = paths[nextIndex];
 
     if (nextPath) {
       this.transitionTo(nextPath);
