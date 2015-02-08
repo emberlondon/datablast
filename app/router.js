@@ -8,6 +8,8 @@ var Router = Ember.Router.extend(RouteStepper, {
 
 Router.map(function() {
   this.route('sapient');
+  this.route('announcements');
+  this.route('line-up');
   this.route('datablast');
 });
 
