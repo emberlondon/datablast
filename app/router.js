@@ -11,6 +11,7 @@ Router.map(function() {
   this.route('announcements');
   this.route('line-up');
   this.route('datablast');
+  this.route('bad-influence');
   this.route('emberconf-sold-out');
   this.route('esnext-6to5');
   this.route('iojs');
