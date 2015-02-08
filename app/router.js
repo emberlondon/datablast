@@ -14,6 +14,7 @@ Router.map(function() {
   this.route('emberconf-sold-out');
   this.route('esnext-6to5');
   this.route('iojs');
+  this.route('broccoli-thursdays');
 });
 
 export default Router;
