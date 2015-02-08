@@ -27,6 +27,7 @@ Router.map(function() {
   this.route('chained-else');
   this.route('block-params');
   this.route('injected-properties');
+  this.route('one-eleven');
 });
 
 export default Router;
