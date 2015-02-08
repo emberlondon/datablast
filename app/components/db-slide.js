@@ -2,6 +2,8 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
   tagName: 'db-slide',
+  active: false,
+  height: Ember.computed.readOnly('window.height'),
 
   activate: function() {
     this.set('active', true);
@@ -10,11 +12,11 @@ export default Ember.Component.extend({
   containerStyle: function() {
     if (!this.get('active')) { return; }
 
-    let height          = this.get('window.height');
+    let height          = this.get('height');
     let container       = this.$('db-slide-container');
     let containerHeight = container.outerHeight(true);
     let offset          = (height - containerHeight) / 2;
 
     return `top: ${offset}px`;
-  }.property('window.height', 'active')
+  }.property('height', 'active')
 });
