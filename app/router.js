@@ -20,6 +20,7 @@ Router.map(function() {
   this.route('ember-flash');
   this.route('ember-inspector');
   this.route('survey');
+  this.route('tom-blog');
 });
 
 export default Router;

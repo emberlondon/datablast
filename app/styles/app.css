@@ -57,8 +57,20 @@ x-tweet {
   margin: 0 auto;
   width: 500px; height: 188px;
   opacity: 0;
-  transition: opacity 0.5s;
+  transition: opacity 0.333s;
+}
+
+x-tweet-container {
+  display: block;
+  position: relative;
   transform: scale(1.5);
+}
+
+x-tweet p {
+  font-size: 0.75em;
+  margin-top: 3.5em;
+  width: 700px;
+  margin-left: -100px;
 }
 
 .application {

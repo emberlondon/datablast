@@ -6,7 +6,7 @@ export default Ember.Component.extend({
 
   insertTweet: function() {
     var id = this.get('tweetId');
-    var el = this.get('element');
+    var el = this.$('x-tweet-container')[0];
 
     twttr.widgets.createTweet(id, el)
       .then(Ember.run.bind(this, 'reveal'));
