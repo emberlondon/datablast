@@ -82,6 +82,21 @@ x-tweet p {
   margin-left: -100px;
 }
 
+red-square,
+green-square {
+  display: block;
+  margin: 0 auto;
+  width: 100px; height: 100px;
+}
+
+red-square {
+  background: red;
+}
+
+green-square {
+  background: green;
+}
+
 .application {
   height: 100%;
 }

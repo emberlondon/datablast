@@ -32,6 +32,7 @@ Router.map(function() {
   this.route('inline-if');
   this.route('each-with-index');
   this.route('bound-attributes');
+  this.route('component-helper');
 });
 
 export default Router;
