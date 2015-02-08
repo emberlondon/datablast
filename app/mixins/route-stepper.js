@@ -4,8 +4,10 @@ export default Ember.Mixin.create({
   init: function() {
     this._super.apply(this, arguments);
 
-    this.keyboard.on('left', Ember.run.bind(this, 'prev'));
-    this.keyboard.on('right', Ember.run.bind(this, 'next'));
+    var keyboard = this.get('keyboard');
+
+    keyboard.on('left', Ember.run.bind(this, 'prev'));
+    keyboard.on('right', Ember.run.bind(this, 'next'));
   },
 
   applicationController: function() {
