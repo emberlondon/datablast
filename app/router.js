@@ -43,6 +43,7 @@ Router.map(function() {
   this.route('ember-cli');
   this.route('ember-data');
   this.route('json-api');
+  this.route('end');
 });
 
 export default Router;
