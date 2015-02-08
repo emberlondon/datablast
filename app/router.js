@@ -34,6 +34,8 @@ Router.map(function() {
   this.route('bound-attributes');
   this.route('component-helper');
   this.route('ember-cli');
+  this.route('ember-data');
+  this.route('json-api');
 });
 
 export default Router;
