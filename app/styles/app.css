@@ -33,6 +33,11 @@ img {
   margin: 0 auto;
 }
 
+iframe {
+  display: block;
+  margin: 0;
+}
+
 db-slide {
   display: block;
   position: relative;
@@ -44,6 +49,16 @@ db-slide {
 db-slide-container {
   display: block;
   position: relative;
+}
+
+x-tweet {
+  display: block;
+  position: relative;
+  margin: 0 auto;
+  width: 500px; height: 188px;
+  opacity: 0;
+  transition: opacity 0.5s;
+  transform: scale(1.5);
 }
 
 .application {

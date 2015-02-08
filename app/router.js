@@ -11,6 +11,7 @@ Router.map(function() {
   this.route('announcements');
   this.route('line-up');
   this.route('datablast');
+  this.route('emberconf-sold-out');
 });
 
 export default Router;
