@@ -16,6 +16,8 @@ Router.map(function() {
   this.route('iojs');
   this.route('broccoli-thursdays');
   this.route('broccolijs');
+  this.route('data-sources');
+  this.route('ember-flash');
 });
 
 export default Router;
