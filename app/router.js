@@ -33,6 +33,7 @@ Router.map(function() {
   this.route('each-with-index');
   this.route('bound-attributes');
   this.route('component-helper');
+  this.route('ember-cli');
 });
 
 export default Router;
