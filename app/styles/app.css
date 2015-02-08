@@ -28,6 +28,11 @@ p {
   margin: 0;
 }
 
+a {
+  color: #e24b31;
+  font-weight: bold;
+}
+
 img {
   display: block;
   margin: 0 auto;
@@ -57,7 +62,7 @@ x-tweet {
   margin: 0 auto;
   width: 500px; height: 188px;
   opacity: 0;
-  transition: opacity 0.333s;
+  transition: opacity 0.3s;
 }
 
 x-tweet-container {
