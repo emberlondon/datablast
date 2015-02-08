@@ -12,6 +12,8 @@ Router.map(function() {
   this.route('line-up');
   this.route('datablast');
   this.route('emberconf-sold-out');
+  this.route('esnext-6to5');
+  this.route('iojs');
 });
 
 export default Router;
