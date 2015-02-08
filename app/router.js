@@ -26,6 +26,7 @@ Router.map(function() {
   this.route('one-ten-upgrading');
   this.route('chained-else');
   this.route('block-params');
+  this.route('injected-properties');
 });
 
 export default Router;
