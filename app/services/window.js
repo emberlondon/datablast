@@ -1,4 +1,5 @@
 import Ember from 'ember';
+var $ = Ember.$;
 
 export default Ember.Object.extend({
   height: 0,
@@ -9,7 +10,7 @@ export default Ember.Object.extend({
     Ember.run(this, 'resize');
   },
 
-  resize: function(event) {
+  resize: function() {
     this.set('height', $(window).height());
   },
 

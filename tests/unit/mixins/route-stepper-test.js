@@ -1,11 +1,11 @@
 import Ember from 'ember';
-import RouteStepperMixin from 'datablast/mixins/route-stepper';
+import RouteStepperMixin from '../../../mixins/route-stepper';
 
-module('RouteStepperMixin');
+QUnit.module('RouteStepperMixin');
 
 // Replace this with your real tests.
-test('it works', function() {
+QUnit.test('it works', function(assert) {
   var RouteStepperObject = Ember.Object.extend(RouteStepperMixin);
   var subject = RouteStepperObject.create();
-  ok(subject);
+  assert.ok(subject);
 });
