@@ -29,6 +29,7 @@ Router.map(function() {
   this.route('injected-properties');
   this.route('one-eleven');
   this.route('one-eleven-upgrading');
+  this.route('inline-if');
 });
 
 export default Router;
