@@ -1,4 +1,5 @@
 import Ember from 'ember';
+var { computed } = Ember;
 
 export default Ember.Mixin.create({
   init: function() {
@@ -10,38 +11,67 @@ export default Ember.Mixin.create({
     keyboard.on('right', Ember.run.bind(this, 'next'));
   },
 
-  applicationController: function() {
-    return this.container.lookup('controller:application');
-  }.property(),
-
-  currentPath: Ember.computed.readOnly('applicationController.currentPath'),
-
-  paths: function() {
+  paths: computed(function() {
     let paths = Ember.keys(this.router.recognizer.names);
 
     paths.removeObjects(['loading', 'error', 'index', 'application']);
     paths.unshiftObject('index');
 
     return paths;
-  }.property(),
+  }),
+
+  applicationController: computed(function() {
+    return this.container.lookup('controller:application');
+  }),
+
+  currentPath: computed.readOnly('applicationController.currentPath'),
+
+  currentIndex: computed('paths.@each', 'currentPath', function() {
+    let paths        = this.get('paths');
+    let currentPath  = this.get('currentPath');
+
+    return paths.indexOf(currentPath);
+  }),
+
+  prevPath: computed('paths.@each', 'currentIndex', function() {
+    let paths        = this.get('paths');
+    let currentIndex = this.get('currentIndex');
+
+    return paths.objectAt(currentIndex - 1);
+  }),
+
+  nextPath: computed('paths.@each', 'currentIndex', function() {
+    let paths        = this.get('paths');
+    let currentIndex = this.get('currentIndex');
+
+    return paths.objectAt(currentIndex + 1);
+  }),
+
+  nextRoute: computed('nextPath', function() {
+    let path = this.get('nextPath');
+    return this.container.lookup(`route:${path}`);
+  }),
 
   prev: function() {
-    this._step(-1);
+    let path = this.get('prevPath');
+
+    if (path) { this.transitionTo(path); }
   },
 
   next: function() {
-    this._step(1);
+    let path = this.get('nextPath');
+
+    if (path) { this.transitionTo(path); }
   },
 
-  _step: function(m) {
-    let currentPath  = this.get('currentPath');
-    let paths        = this.get('paths');
-    let currentIndex = paths.indexOf(currentPath);
-    let nextIndex    = currentIndex + m;
-    let nextPath     = paths[nextIndex];
+  didTransition: function(...args) {
+    let result = this._super.apply(this, args);
+    let nextRoute = this.get('nextRoute');
 
-    if (nextPath) {
-      this.transitionTo(nextPath);
+    if (nextRoute && nextRoute.preload) {
+      nextRoute.preload();
     }
+
+    return result;
   }
 });
