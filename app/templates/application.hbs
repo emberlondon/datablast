@@ -1,5 +1,9 @@
 {{liquid-outlet}}
 
+<p class="page">
+  Slide {{num-inc model.currentIndex}} of {{model.count}}
+</p>
+
 {{#if model.nextPath}}
   {{link-to "Next" model.nextPath class="next"}}
 {{/if}}

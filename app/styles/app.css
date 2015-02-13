@@ -121,12 +121,17 @@ green-square {
   background: green;
 }
 
-.prev, .next {
+.page, .prev, .next {
   position: absolute;
   padding: 1em;
   color: #ccc;
   font-size: .5em;
   bottom: 0;
+}
+
+.page {
+  left: 25%; right: 25%;
+  text-align: center;
 }
 
 .prev {

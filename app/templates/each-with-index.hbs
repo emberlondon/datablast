@@ -5,6 +5,6 @@
   <hr>
   <h4>Speakers:</h4>
   {{#each speakers as |speaker index|}}
-    <p>{{index}}. {{speaker}}</p>
+    <p>{{num-inc index}}. {{speaker}}</p>
   {{/each}}
 {{/db-slide}}

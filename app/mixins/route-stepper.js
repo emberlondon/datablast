@@ -35,6 +35,8 @@ export default Ember.Mixin.create({
     return paths.indexOf(currentPath);
   }),
 
+  count: computed.readOnly('paths.length'),
+
   prevPath: computed('paths.@each', 'currentIndex', function() {
     let paths        = this.get('paths');
     let currentIndex = this.get('currentIndex');
