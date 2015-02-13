@@ -6,6 +6,8 @@ export default Ember.Component.extend({
   window: Ember.inject.service(),
 
   insertTweet: function() {
+    if (typeof twttr === 'undefined') { return; }
+
     let id = this.get('tweetId');
     let el = this.$('x-tweet-container')[0];
 
