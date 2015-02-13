@@ -1,10 +1,10 @@
-{{#db-slide}}
-  <h2>Ember 1.10</h2>
+{{#db-slide as |slide|}}
+  <h2>Ember 1.10 {{slide.height}}</h2>
   <hr>
   <h3>Block Params</h3>
   <hr>
   <h4>Speakers:</h4>
-  {{#each speaker in speakers}}
+  {{#each speakers as |speaker|}}
     <p>{{speaker}}</p>
   {{/each}}
 {{/db-slide}}

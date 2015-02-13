@@ -3,6 +3,7 @@ import Ember from 'ember';
 export default Ember.Component.extend({
   tagName: 'db-slide',
   active: false,
+  window: Ember.inject.service(),
   height: Ember.computed.readOnly('window.height'),
 
   activate: function() {

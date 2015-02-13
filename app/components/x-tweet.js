@@ -3,6 +3,7 @@ let $ = Ember.$;
 
 export default Ember.Component.extend({
   tagName: 'x-tweet',
+  window: Ember.inject.service(),
 
   insertTweet: function() {
     let id = this.get('tweetId');

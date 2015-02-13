@@ -3,7 +3,7 @@
   <hr>
   <h3>Bound attributes</h3>
   <hr>
-  <label {{bind-attr class=":demo-box isGreen"}}>
+  <label class="demo-box {{if isGreen 'is-green'}}">
     {{input type="checkbox" checked=isGreen}}
   </label>
 {{/db-slide}}

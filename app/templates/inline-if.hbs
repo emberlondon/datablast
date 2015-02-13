@@ -9,7 +9,7 @@
       Cool?
     </label>
   </p>
-  <p>
-    Ember is {{#if isCool}}cool{{else}}okay{{/if}}.
+  <p class="foo {{if isCool 'cool' 'not-cool'}}">
+    Ember is {{if isCool "cool" "okay"}}.
   </p>
 {{/db-slide}}

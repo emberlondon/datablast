@@ -6,16 +6,12 @@
   <p>
     {{#if empty}}
       Choose a password…
+    {{else if tooShort}}
+      Too short :(
+    {{else if tooLong}}
+      Too long :(
     {{else}}
-      {{#if tooShort}}
-        Too short :(
-      {{else}}
-        {{#if tooLong}}
-          Too long :(
-        {{else}}
-          Perfect :)
-        {{/if}}
-      {{/if}}
+      Perfect :)
     {{/if}}
   </p>
   <p style="margin-top: 0.5em">

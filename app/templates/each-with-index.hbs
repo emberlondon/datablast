@@ -4,7 +4,7 @@
   <h3>Each with index</h3>
   <hr>
   <h4>Speakers:</h4>
-  {{#each speaker in speakers}}
-    <p>{{speaker}}</p>
+  {{#each speakers as |speaker index|}}
+    <p>{{index}}. {{speaker}}</p>
   {{/each}}
 {{/db-slide}}

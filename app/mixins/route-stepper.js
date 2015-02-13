@@ -2,6 +2,8 @@ import Ember from 'ember';
 var { computed } = Ember;
 
 export default Ember.Mixin.create({
+  keyboard: Ember.inject.service(),
+
   init: function() {
     this._super.apply(this, arguments);
 
