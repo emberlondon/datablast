@@ -1,1 +1,9 @@
 {{liquid-outlet}}
+
+{{#if model.nextPath}}
+  {{link-to "Next" model.nextPath class="next"}}
+{{/if}}
+
+{{#if model.prevPath}}
+  {{link-to "Previous" model.prevPath class="prev"}}
+{{/if}}

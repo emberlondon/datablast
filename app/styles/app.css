@@ -120,3 +120,19 @@ green-square {
 .demo-box.is-green {
   background: green;
 }
+
+.prev, .next {
+  position: absolute;
+  padding: 1em;
+  color: #ccc;
+  font-size: .5em;
+  bottom: 0;
+}
+
+.prev {
+  left: 0;
+}
+
+.next {
+  right: 0;
+}
