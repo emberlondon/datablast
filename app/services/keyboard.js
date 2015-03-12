@@ -1,6 +1,8 @@
 import Ember from 'ember';
 
 let KEYS = {
+  33: 'left',
+  34: 'right',
   37: 'left',
   39: 'right'
 };
