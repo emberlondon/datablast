@@ -10,10 +10,6 @@ Router.map(function() {
   this.route('line-up');
   this.route('sapient');
   this.route('announcements');
-  this.route('dockyard');
-  this.route('hire-dockyard');
-  this.route('wicked-good-ember');
-  this.route('kayako');
   this.route('ember-london');
   this.route('ember-london-stats');
   this.route('upcoming-events');
@@ -21,12 +17,6 @@ Router.map(function() {
   this.route('forum');
   this.route('website');
   this.route('datablast');
-  this.route('emberconf');
-  this.route('emberconfreaks');
-  this.route('glimmer');
-  this.route('release-cycle');
-  this.route('favourite-talks');
-  this.route('end');
   this.route('on-to-the-talks');
 });
 
