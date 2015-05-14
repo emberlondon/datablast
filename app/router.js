@@ -9,6 +9,7 @@ var Router = Ember.Router.extend(RouteStepper, {
 Router.map(function() {
   this.route('line-up');
   this.route('sapient');
+  this.route('crowdstrike');
   this.route('announcements');
   this.route('ember-london');
   this.route('ember-london-stats');
@@ -17,6 +18,7 @@ Router.map(function() {
   this.route('forum');
   this.route('website');
   this.route('datablast');
+  this.route('glimmer');
   this.route('on-to-the-talks');
 });
 
