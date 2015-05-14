@@ -18,6 +18,7 @@ Router.map(function() {
   this.route('forum');
   this.route('website');
   this.route('datablast');
+  this.route('glimmer-tweet');
   this.route('glimmer');
   this.route('on-to-the-talks');
 });
