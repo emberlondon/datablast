@@ -11,7 +11,7 @@ import $ from 'jquery';
       svg;
 
   function init() {
-    svg = document.querySelector('svg');
+    svg = document.querySelector('.crowdstrike svg');
     paths = svg.querySelectorAll('path.edge');
     dm.current.push(timeTick);
     dm.current.push(drawPoints);
