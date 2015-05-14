@@ -29,6 +29,6 @@
     "ember-cli-qunit": "0.3.9",
     "ember-cli-uglify": "1.0.1",
     "ember-export-application-global": "^1.0.2",
-    "liquid-fire": "^0.18.0"
+    "liquid-fire": "0.20.0"
   }
 }
