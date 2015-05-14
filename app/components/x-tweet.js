@@ -5,7 +5,7 @@ export default Ember.Component.extend({
   tagName: 'x-tweet',
   window: Ember.inject.service(),
 
-  insertTweet: function() {
+  didInsertElement() {
     if (typeof twttr === 'undefined') { return; }
 
     let id = this.get('tweetId');
@@ -13,7 +13,7 @@ export default Ember.Component.extend({
 
     twttr.widgets.createTweet(id, el)
       .then(Ember.run.bind(this, 'reveal'));
-  }.on('didInsertElement'),
+  },
 
   reveal: function(tweet) {
     tweet = $(tweet);
@@ -24,6 +24,6 @@ export default Ember.Component.extend({
       opacity: 1
     });
 
-    this.window.notifyPropertyChange('height');
+    this.get('window').notifyPropertyChange('height');
   }
 });
