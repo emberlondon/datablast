@@ -1,4 +1,5 @@
 import Ember from 'ember';
+import $ from 'jquery';
 
 
   var paths = [],
@@ -45,7 +46,7 @@ import Ember from 'ember';
         var loc = path.getPointAtLength(0),
             point = drawPoint(loc.x, loc.y);
         setTimeout(function() {
-          Tween(point, 'opacity', 1, 0, 1000);
+          tween(point, 'opacity', 1, 0, 1000);
         }, 1000);
         lastPointPath += 1;
       }
@@ -65,7 +66,7 @@ import Ember from 'ember';
         path.style.strokeDashoffset = length;
         path.style.strokeDasharray = length;
         path.style.stroke= '#bbb';
-        Tween(path, 'strokeDashoffset', length, 0, 1000);
+        tween(path, 'strokeDashoffset', length, 0, 1000);
         lastLinePath += 1;
       }
     } else {
@@ -76,26 +77,26 @@ import Ember from 'ember';
   function fills() {
     var reds = document.querySelectorAll('path.red'),
         darks = document.querySelectorAll('polygon.dark, path.dark'),
-        edges = document.querySelectorAll('path.edge')
+        edges = document.querySelectorAll('path.edge');
     Array.prototype.forEach.call(reds, function(r) {
-      r.style.opacity = '0'
+      r.style.opacity = '0';
       r.style.fill = '#EA3A26';
-      Tween(r, 'opacity', 0, 1, 2000);
+      tween(r, 'opacity', 0, 1, 2000);
     });
     Array.prototype.forEach.call(darks, function(r) {
-      r.style.opacity = '0'
+      r.style.opacity = '0';
       r.style.fill = '#474748';
-      Tween(r, 'opacity', 0, 1, 2000);
+      tween(r, 'opacity', 0, 1, 2000);
     });
     Array.prototype.forEach.call(edges, function(r) {
-      Tween(r, 'opacity', 1, 0, 2000);
+      tween(r, 'opacity', 1, 0, 2000);
     });
     setTimeout(function() {
-      Tween($('.crowdstrike ol')[0], 'opacity', 0, 1, 2000);
+      tween($('.crowdstrike ol')[0], 'opacity', 0, 1, 2000);
     }, 2000);
   }
 
-  var Tween = function(elem, prop, startVal, endVal, time) {
+  var tween = function(elem, prop, startVal, endVal, time) {
     var ease = cubic,
         t0 = t,
         i = interpolate(startVal, endVal),
@@ -103,14 +104,14 @@ import Ember from 'ember';
 
     tick = function() {
       var tx = ((t - t0) * 16) / time;
-      if (tx >= 1) { 
-        dm.remove(tick) 
+      if (tx >= 1) {
+        dm.remove(tick);
       }
       elem.style[prop] = i(ease(tx));
-    }
+    };
 
     dm.current.push(tick);
-  }
+  };
 
   //DrawManager
   var dm = {
@@ -134,18 +135,19 @@ import Ember from 'ember';
         return f !== func;
       });
     }
-  }
+  };
 
   //D3 Borrowed
   function cubic(t) {
-    if (t <= 0) return 0;
-    if (t >= 1) return 1;
+    if (t <= 0) { return 0; }
+    if (t >= 1) { return 1; }
     var t2 = t * t, t3 = t2 * t;
-    return 4 * (t < .5 ? t3 : 3 * (t - t2) + t3 - .75);
+    return 4 * (t < 0.5 ? t3 : 3 * (t - t2) + t3 - 0.75);
   }
 
   function interpolate(a, b) {
-    a = +a, b = +b;
+    a = +a;
+    b = +b;
     return function(t) { return a * (1 - t) + b * t; };
   }
 
