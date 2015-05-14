@@ -26,8 +26,6 @@ export default Ember.Mixin.create({
     return this.container.lookup('controller:application');
   }),
 
-  currentPath: computed.readOnly('applicationController.currentPath'),
-
   currentIndex: computed('paths.@each', 'currentPath', function() {
     let paths        = this.get('paths');
     let currentPath  = this.get('currentPath');
