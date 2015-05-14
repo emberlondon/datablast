@@ -1,0 +1,37 @@
+.crowdstrike svg {
+  width: 800px;
+}
+
+.crowdstrike path {
+  stroke-miterlimit: 10;
+}
+
+.crowdstrike path.edge {
+  fill: transparent;
+}
+
+.crowdstrike #logo path {
+  stroke-width: 1;
+  stroke: transparent;
+}
+
+.crowdstrike .filler {
+  fill: transparent;
+}
+
+.crowdstrike circle {
+  fill: #bbb;
+}
+
+.crowdstrike ol {
+  font-family: 'Helvetica Neue','HelveticaNeue', Helvetia, sans-serif;
+  list-style-type: none;
+  margin: 0;
+  font-weight: 200;
+  font-size: 1.1em;
+  opacity: 0;
+}
+
+.crowdstrike ol li span {
+  font-weight: bold;
+}
