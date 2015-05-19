@@ -1,21 +1,21 @@
 import Ember from 'ember';
-let $ = Ember.$;
+const { Component, $, inject, run } = Ember;
 
-export default Ember.Component.extend({
+export default Component.extend({
   tagName: 'x-tweet',
-  window: Ember.inject.service(),
+  window: inject.service(),
 
   didInsertElement() {
-    if (typeof twttr === 'undefined') { return; }
+    if (!window.twttr) { return; }
 
-    let id = this.get('tweetId');
+    let id = this.attrs['tweet-id'];
     let el = this.$('x-tweet-container')[0];
 
     twttr.widgets.createTweet(id, el)
-      .then(Ember.run.bind(this, 'reveal'));
+      .then(run.bind(this, 'reveal'));
   },
 
-  reveal: function(tweet) {
+  reveal(tweet) {
     tweet = $(tweet);
 
     this.$().css({
