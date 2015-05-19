@@ -1,53 +1,55 @@
 # Datablast
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+These are the [Ember London](http://emberlondon.com) intro slides.
 
-## Prerequisites
+## Contributing
 
-You will need the following things properly installed on your computer.
+Every month’s slide deck lives in its own branch.
 
-* [Git](http://git-scm.com/)
-* [Node.js](http://nodejs.org/) (with NPM)
-* [Bower](http://bower.io/)
-* [Ember CLI](http://www.ember-cli.com/)
-* [PhantomJS](http://phantomjs.org/)
+Please submit a PR against the desired month with the slides you’d like to add.
 
-## Installation
+## Adding Slides
 
-* `git clone <repository-url>` this repository
-* change into the new directory
-* `npm install`
-* `bower install`
+1. Declare a route at the desired point
+2. Create a template to match
 
-## Running / Development
+For example, to add a slide called `foo`:
 
-* `ember server`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
+```js
+// app/router.js
 
-### Code Generators
+Router.map(function() {
+  this.route('line-up');
+  this.route('sapient');
+  this.route('announcements');
+  this.route('ember-london');
+  this.route('ember-london-stats');
+  this.route('upcoming-events');
+  this.route('slack');
+  this.route('forum');
+  this.route('website');
+  this.route('datablast');
+  this.route('foo'); // <--- Foo goes here
+  this.route('on-to-the-talks');
+});
+```
 
-Make use of the many generators for code, try `ember help generate` for more details
+```hbs
+{{! app/templates/foo.hbs }}
 
-### Running Tests
+<db-slide>
+  Slide content here.
+</db-slide>
+```
 
-* `ember test`
-* `ember test --server`
+## Adding Tweets
 
-### Building
+Tweets may be added with the `x-tweet` component:
 
-* `ember build` (development)
-* `ember build --environment production` (production)
+```hbs
+{{! app/templates/foo.hbs }}
 
-### Deploying
-
-Specify what it takes to deploy your app.
-
-## Further Reading / Useful Links
-
-* [ember.js](http://emberjs.com/)
-* [ember-cli](http://www.ember-cli.com/)
-* Development Browser Extensions
-  * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
-  * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
-
+<db-slide>
+  <x-tweet tweet-id="1234567890" />
+</db-slide>
+```
