@@ -4,7 +4,7 @@ These are the [Ember London](http://emberlondon.com) intro slides.
 
 ## Contributing
 
-Every month’s slide deck lives in its own branch.
+Every month’s slide deck lives in its own branch. The naming convention is `YYYY-MM`.
 
 Please submit a PR against the desired month with the slides you’d like to add.
 
