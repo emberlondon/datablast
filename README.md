@@ -49,7 +49,7 @@ Tweets may be added with the `x-tweet` component:
 ```hbs
 {{! app/templates/foo.hbs }}
 
-<db-slide>
-  <x-tweet tweet-id="1234567890" />
-</db-slide>
+{{#db-slide}}
+  {{x-tweet tweet-id="1234567890"}}
+{{/db-slide}}
 ```
