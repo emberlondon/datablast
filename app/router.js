@@ -17,6 +17,8 @@ Router.map(function() {
   this.route('slack');
   this.route('forum');
   this.route('datablast');
+  this.route('tomsters');
+  this.route('rfcs');
   this.route('kelly-sutton-post');
   this.route('ember-cli-ssl');
   this.route('on-to-the-talks');
