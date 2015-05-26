@@ -18,6 +18,7 @@ Router.map(function() {
   this.route('forum');
   this.route('datablast');
   this.route('tomsters');
+  this.route('emberfest');
   this.route('rfcs');
   this.route('kelly-sutton-post');
   this.route('ember-cli-ssl');
