@@ -1,0 +1,20 @@
+{{#db-slide}}
+  <a href="https://github.com/emberjs/ember.js/pull/11171">
+    <p>Iterating through Objects with \{{each-in}}...</p>
+  </a>
+
+    {{#code-block language='javascript'}}
+// controller.js
+countries: {
+  nz: "Awesome",
+  au: "Boo"
+}{{/code-block}}
+
+    {{#code-block language='handlebars'}}
+\{{!-- template.hbs --}}
+\{{#each-in countries as |name value|}}
+  <p>\{{name}}: \{{value}}</p>
+\{{/each-in}}{{/code-block}}
+
+
+{{/db-slide}}
