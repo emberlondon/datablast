@@ -141,3 +141,8 @@ green-square {
 .next {
   right: 0;
 }
+
+pre[class*="language-"] {
+  width: 80%;
+  margin: 1em auto;
+}
