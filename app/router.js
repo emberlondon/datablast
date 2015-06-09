@@ -23,7 +23,6 @@ Router.map(function() {
   this.route('emberfest-tickets');
   this.route('rfcs');
   this.route('kelly-sutton-post');
-  this.route('ember-cli-ssl');
   this.route('each-in');
   this.route('on-to-the-talks');
 });
