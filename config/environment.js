@@ -16,6 +16,15 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
+    },
+
+    meetup: {
+      handle: 'London-Emberjs-User-Group',
+      key: process.env.MEETUP_API_KEY
+    },
+
+    vimeo: {
+      token: process.env.VIMEO_TOKEN
     }
   };
 
