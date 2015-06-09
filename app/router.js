@@ -20,6 +20,7 @@ Router.map(function() {
   this.route('datablast');
   this.route('tomsters');
   this.route('emberfest');
+  this.route('emberfest-tickets');
   this.route('rfcs');
   this.route('kelly-sutton-post');
   this.route('ember-cli-ssl');
