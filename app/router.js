@@ -22,6 +22,10 @@ Router.map(function() {
   this.route('emberfest');
   this.route('emberfest-tickets');
   this.route('rfcs');
+  this.route('improved-actions');
+  this.route('helpers');
+  this.route('release-process');
+  this.route('component-unification');
   this.route('kelly-sutton-post');
   this.route('each-in');
   this.route('on-to-the-talks');
