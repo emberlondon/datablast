@@ -10,6 +10,7 @@ Router.map(function() {
   this.route('line-up');
   this.route('sapient');
   this.route('announcements');
+  this.route('red-badger');
   this.route('ember-london');
   this.route('ember-london-stats');
   this.route('upcoming-events');
