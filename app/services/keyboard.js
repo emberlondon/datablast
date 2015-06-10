@@ -1,19 +1,21 @@
 import Ember from 'ember';
 
-let KEYS = {
+const { Service, Evented, run } = Ember;
+
+const KEYS = {
   33: 'left',
   34: 'right',
   37: 'left',
   39: 'right'
 };
 
-export default Ember.Object.extend(Ember.Evented, {
-  init: function() {
-    this.listener = Ember.run.bind(this, 'keyDown');
+export default Service.extend(Evented, {
+  init() {
+    this.listener = run.bind(this, 'keyDown');
     window.addEventListener('keydown', this.listener);
   },
 
-  keyDown: function(event) {
+  keyDown(event) {
     let name = KEYS[event.keyCode];
 
     if (name) {
@@ -21,7 +23,7 @@ export default Ember.Object.extend(Ember.Evented, {
     }
   },
 
-  willDestroy: function() {
+  willDestroy() {
     window.removeEventListener('keydown', this.listener);
     delete this.listener;
   }

@@ -1,20 +1,20 @@
 import Ember from 'ember';
-var $ = Ember.$;
+const { Service, $, run } = Ember;
 
-export default Ember.Object.extend({
+export default Service.extend({
   height: 0,
 
-  init: function() {
-    this.listener = Ember.run.bind(this, 'resize');
+  init() {
+    this.listener = run.bind(this, 'resize');
     window.addEventListener('resize', this.listener);
-    Ember.run(this, 'resize');
+    run(this, 'resize');
   },
 
-  resize: function() {
+  resize() {
     this.set('height', $(window).height());
   },
 
-  willDestroy: function() {
+  willDestroy() {
     window.removeEventListener('resize', this.listener);
     delete this.listener;
   }

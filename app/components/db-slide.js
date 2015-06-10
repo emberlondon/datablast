@@ -1,10 +1,10 @@
 import Ember from 'ember';
-const { observer, run } = Ember;
+const { Component, computed, inject, observer, run } = Ember;
 
-export default Ember.Component.extend({
+export default Component.extend({
   tagName: 'db-slide',
-  window: Ember.inject.service(),
-  height: Ember.computed.readOnly('window.height'),
+  window: inject.service(),
+  height: computed.readOnly('window.height'),
 
   didInsertElement() {
     this.schedulePositionContainer();

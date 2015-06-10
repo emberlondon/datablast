@@ -1,20 +1,20 @@
 import Ember from 'ember';
-var { computed } = Ember;
+var { Mixin, computed, inject, keys, run } = Ember;
 
-export default Ember.Mixin.create({
-  keyboard: Ember.inject.service(),
+export default Mixin.create({
+  keyboard: inject.service(),
 
-  init: function() {
+  init() {
     this._super.apply(this, arguments);
 
     let keyboard = this.get('keyboard');
 
-    keyboard.on('left', Ember.run.bind(this, 'prev'));
-    keyboard.on('right', Ember.run.bind(this, 'next'));
+    keyboard.on('left', run.bind(this, 'prev'));
+    keyboard.on('right', run.bind(this, 'next'));
   },
 
   paths: computed(function() {
-    let paths = Ember.keys(this.router.recognizer.names);
+    let paths = keys(this.router.recognizer.names);
 
     paths.removeObjects(['loading', 'error', 'index', 'application']);
     paths.unshiftObject('index');
@@ -54,19 +54,19 @@ export default Ember.Mixin.create({
     return this.container.lookup(`route:${path}`);
   }),
 
-  prev: function() {
+  prev() {
     let path = this.get('prevPath');
 
     if (path) { this.transitionTo(path); }
   },
 
-  next: function() {
+  next() {
     let path = this.get('nextPath');
 
     if (path) { this.transitionTo(path); }
   },
 
-  didTransition: function(...args) {
+  didTransition(...args) {
     let result = this._super.apply(this, args);
     let nextRoute = this.get('nextRoute');
 
