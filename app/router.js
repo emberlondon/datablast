@@ -13,9 +13,9 @@ Router.map(function() {
   this.route('ember-london');
   this.route('ember-london-stats');
   this.route('upcoming-events');
+  this.route('website');
   this.route('slack');
   this.route('forum');
-  this.route('website');
   this.route('datablast');
   this.route('on-to-the-talks');
 });
