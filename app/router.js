@@ -28,6 +28,8 @@ Router.map(function() {
   this.route('component-unification');
   this.route('kelly-sutton-post');
   this.route('each-in');
+  this.route('dockyard-fastboot');
+  this.route('dockyard-source');
   this.route('on-to-the-talks');
 });
 
