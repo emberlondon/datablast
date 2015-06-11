@@ -30,6 +30,7 @@ Router.map(function() {
   this.route('each-in');
   this.route('dockyard-fastboot');
   this.route('dockyard-source');
+  this.route('vault');
   this.route('on-to-the-talks');
 });
 
