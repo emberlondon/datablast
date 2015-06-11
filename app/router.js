@@ -31,6 +31,7 @@ Router.map(function() {
   this.route('dockyard-fastboot');
   this.route('dockyard-source');
   this.route('vault');
+  this.route('ember-portal');
   this.route('on-to-the-talks');
 });
 

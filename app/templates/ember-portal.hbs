@@ -1,0 +1,22 @@
+{{#db-slide}}
+  <h1>ember-portal</h1>
+
+  <p><a href="https://github.com/minutebase/ember-portal">github.com/minutebase/ember-portal</a></p>
+
+{{#code-block language="handlebars"}}
+\{{!-- application.hbs --}}
+\{{portal-for name="slide-name"}}
+{{/code-block}}
+
+{{#code-block language="handlebars"}}
+\{{!-- ember-portal.hbs --}}
+\{{#portal-content for="slide-name"}}
+  &lt;h3&gt;(ember-portal)&lt;/h3&gt;
+\{{/portal-content}}
+{{/code-block}}
+
+  {{#portal-content for="slide-name"}}
+    <h3 style="color: green; margin-bottom: 10px;">(ember-portal)</h3>
+  {{/portal-content}}
+
+{{/db-slide}}
