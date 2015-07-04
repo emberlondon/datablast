@@ -149,19 +149,22 @@ pre[class*="language-"] {
 
 @keyframes jelly {
   0% {
-    transform: translate(30px, 400px);
+    transform: translate(-100px, 400px);
   }
-  25% {
-    transform: translate(-30px, 0px);
+  20% {
+    transform: translate(-100px, 400px);
   }
-  50% {
-    transform: translate(-100px, -200px);
+  40% {
+    transform: translate(0px, 100px);
   }
-  75% {
+  60% {
+    transform: translate(-150px, -200px);
+  }
+  80% {
     transform: translate(0px, -400px);
   }
   100% {
-    transform: translate(-100px, -800px);
+    transform: translate(-150px, -800px);
   }
 }
 
