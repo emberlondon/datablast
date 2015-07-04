@@ -17,6 +17,7 @@ Router.map(function() {
   this.route('website');
   this.route('slack');
   this.route('datablast');
+  this.route('2-0-0-beta');
   this.route('on-to-the-talks');
 });
 
