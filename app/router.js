@@ -41,6 +41,9 @@ Router.map(function() {
   this.route('new-actions-code');
   this.route('new-actions-demo');
   this.route('new-actions-currying');
+  this.route('new-actions-currying-js');
+  this.route('new-actions-currying-explanation');
+  this.route('new-actions-currying-explanation-2');
   this.route('new-actions-currying-demo');
   this.route('on-to-the-talks');
 });

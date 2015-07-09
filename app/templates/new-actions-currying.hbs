@@ -1,6 +1,13 @@
 {{#db-slide}}
   <h2>New actions: Currying</h2>
-  <pre class="language-handlebars" style="font-size: 20px;padding-top: 10px;padding-botttom: 10px;">
-    {{codeSample}}
-  </pre>
+  {{#code-block language="handlebars"}}
+  \{{!-- party.hbs --}}
+  \{{my-component salute=(action "say" "Hello")}}
+
+  \{{!-- my-component/template.hbs --}}
+  \{{another-component geekSalute=(action salute "world")}}
+
+  \{{!-- // another-component/template.hbs --}}
+  &lt;button \{{action geekSalute "Tomster!"}}&gt;Greet Tomster&lt;/button&gt;
+  {{/code-block}}
 {{/db-slide}}

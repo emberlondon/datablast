@@ -1,13 +1,13 @@
 {{#db-slide}}
   <h3>So I did</h3>
 
-  <pre class="language-handlebars" style="font-size: 20px;">
-    {{snippetOldStyle}}
-  </pre>
+  {{#code-block language="handlebars"}}
+  \{{input type="text" value=val}}
+  {{/code-block}}
 
   Now can be expresed as:
 
-  <pre class="language-html" style="font-size: 20px;">
-    {{snippetNewStyle}}
-  </pre>
+  {{#code-block language="handlebars"}}
+  &lt;input type="text" value=\{{val}} oninput=\{{action (mut val) value="target.value"}}&gt;
+  {{/code-block}}
 {{/db-slide}}
