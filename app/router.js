@@ -20,7 +20,10 @@ Router.map(function() {
   this.route('in-the-wild');
   this.route('apple-music');
   this.route('playstation-now');
+  this.route('cool-tools');
+  this.route('ember-twiddle');
   this.route('2-0-0');
+  this.route('2-0-blog-post');
   this.route('ember-data');
   this.route('ember-data-blog-post');
   this.route('ember-data-new-store-methods');
@@ -29,8 +32,10 @@ Router.map(function() {
   this.route('ember-data-new-reload');
   this.route('ember-data-new-background-reload');
   this.route('ember-data-new-should-reload');
+  this.route('ember-cli');
   this.route('ember-cli-1-13');
   this.route('ember-cli-1-13-1');
+  this.route('ember-cli-migrate');
   this.route('on-to-the-talks');
 });
 
