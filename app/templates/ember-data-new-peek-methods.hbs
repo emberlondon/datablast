@@ -1,0 +1,15 @@
+{{#db-slide}}
+
+<h3>Before</h3>
+
+{{#code-block language="javascript"}}
+store.all('widget');
+store.getById('widget', 1);{{/code-block}}
+
+<h3>After</h3>
+
+{{#code-block language="javascript"}}
+store.peekAll('widget');
+store.peekRecord('widget', 1);{{/code-block}}
+
+{{/db-slide}}

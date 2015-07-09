@@ -1,0 +1,21 @@
+{{#db-slide}}
+<h3>With records already in the store…</h3>
+<div style="font-size: .8em">
+{{#code-block}}
+ +-----+                            +-------+                            +-----+
+ | App |                            | Store |                            | API |
+ |     | --- findAll('widget') ---&gt; |       |                            |     |
+ |     |                            |       |                            |     |
+ |     | &lt;---- cached records ----- |       |                            |     |
+ |     |                            |       |                            |     |
+ |     |                            |       |    (background reload)     |     |
+ |     |                            |       |                            |     |
+ |     |                            |       | ----- GET /widgets ------&gt; |     |
+ |     |                            |       |                            |     |
+ |     |                            |       | &lt;--- { "data": [...] } --- |     |
+ |     |                            |       |                            |     |
+ |     | &lt;---- update records ----- |       |                            |     |
+ |     |                            |       |                            |     |
+ +-----+                            +-------+                            +-----+{{/code-block}}
+</div>
+{{/db-slide}}

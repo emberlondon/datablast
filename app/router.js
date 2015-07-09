@@ -18,6 +18,13 @@ Router.map(function() {
   this.route('slack');
   this.route('datablast');
   this.route('2-0-0-beta');
+  this.route('ember-data');
+  this.route('ember-data-new-store-methods');
+  this.route('ember-data-new-peek-methods');
+  this.route('ember-data-new-fetch-methods');
+  this.route('ember-data-new-reload');
+  this.route('ember-data-new-background-reload');
+  this.route('ember-data-new-should-reload');
   this.route('on-to-the-talks');
 });
 

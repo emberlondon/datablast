@@ -1,0 +1,17 @@
+{{#db-slide}}
+<h3>With no records in the store (or with <code>reload: true</code>)…</h3>
+<div style="font-size: .8em">
+{{#code-block}}
+ +-----+                            +-------+                            +-----+
+ | App |                            | Store |                            | API |
+ |     | --- findAll('widget') ---&gt; |       |                            |     |
+ |     |                            |       |                            |     |
+ |     |                            |       | ----- GET /widgets ------&gt; |     |
+ |     |                            |       |                            |     |
+ |     |                            |       | &lt;--- { "data": [...] } --- |     |
+ |     |                            |       |                            |     |
+ |     | &lt;------- records --------- |       |                            |     |
+ |     |                            |       |                            |     |
+ +-----+                            +-------+                            +-----+{{/code-block}}
+</div>
+{{/db-slide}}
