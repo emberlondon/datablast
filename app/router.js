@@ -17,16 +17,20 @@ Router.map(function() {
   this.route('website');
   this.route('slack');
   this.route('datablast');
+  this.route('in-the-wild');
   this.route('apple-music');
-  this.route('apple-music-2');
-  this.route('2-0-0-beta');
+  this.route('playstation-now');
+  this.route('2-0-0');
   this.route('ember-data');
+  this.route('ember-data-blog-post');
   this.route('ember-data-new-store-methods');
   this.route('ember-data-new-peek-methods');
   this.route('ember-data-new-fetch-methods');
   this.route('ember-data-new-reload');
   this.route('ember-data-new-background-reload');
   this.route('ember-data-new-should-reload');
+  this.route('ember-cli-1-13');
+  this.route('ember-cli-1-13-1');
   this.route('on-to-the-talks');
 });
 
