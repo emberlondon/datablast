@@ -1,0 +1,12 @@
+{{#db-slide}}
+<h3>Control all this at the adapter level</h3>
+{{#code-block language="javascript"}}
+// app/adapters/application.js
+
+export default JSONAPIAdapter.extend({
+  shouldReloadAll(store, snapshots) {},
+  shouldReloadRecord(store, snapshot) {},
+  shouldBackgroundReloadAll(store, snaphosts) {},
+  shouldBackgroundReloadRecord(store, snapshot) {}
+});{{/code-block}}
+{{/db-slide}}

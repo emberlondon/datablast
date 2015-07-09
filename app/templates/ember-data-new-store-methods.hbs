@@ -1,0 +1,18 @@
+{{#db-slide}}
+
+<h3>Before</h3>
+
+{{#code-block language="javascript"}}
+store.find('widget');
+store.find('widget', 1);
+store.find('widget', { colour: 'red' });{{/code-block}}
+
+<h3>After</h3>
+
+{{#code-block language="javascript"}}
+store.findAll('widget');
+store.findRecord('widget', 1);
+store.query('widget', { colour: 'red' });
+store.queryRecord('widget', { colour: 'red' }); // Just one{{/code-block}}
+
+{{/db-slide}}
