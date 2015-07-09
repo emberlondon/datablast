@@ -21,10 +21,10 @@ Router.map(function() {
   this.route('apple-music');
   this.route('playstation-now');
   this.route('consul');
-  this.route('cool-tools');
   this.route('ember-twiddle');
   this.route('2-0-0');
   this.route('2-0-blog-post');
+  this.route('perf');
   this.route('ember-data');
   this.route('ember-data-blog-post');
   this.route('ember-data-new-store-methods');
