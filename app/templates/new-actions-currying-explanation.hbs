@@ -1,14 +1,13 @@
 {{#db-slide}}
-  {{#code-block language="javascript"}}
-  var say = function(...words) { return words.join(' '); };
+{{#code-block language="javascript"}}
+var say = function(...words) { return words.join(' '); };
 
-  var salute = say.bind(context, "Hello");
+var salute = say.bind(context, "Hello");
 
-  var geekSalue = salute.bind(context, "world");
+var geekSalue = salute.bind(context, "world");
 
-  var geekSaluteTomster = salute.bind(context, "Tomster!");
+var geekSaluteTomster = salute.bind(context, "Tomster!");
 
-  geekSaluteTomster(); // "Hello world Tomster!"
-  {{/code-block}}
+geekSaluteTomster(); // "Hello world Tomster!"{{/code-block}}
 {{/db-slide}}
 

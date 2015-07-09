@@ -1,13 +1,13 @@
 {{#db-slide}}
   <h3>So I did</h3>
 
-  {{#code-block language="handlebars"}}
-  \{{input type="text" value=val}}
-  {{/code-block}}
+{{#code-block language="handlebars"}}
+\{{input type="text" value=val}}{{/code-block}}
 
   Now can be expresed as:
 
-  {{#code-block language="handlebars"}}
-  &lt;input type="text" value=\{{val}} oninput=\{{action (mut val) value="target.value"}}&gt;
-  {{/code-block}}
+{{#code-block language="handlebars"}}
+&lt;input type="text"
+       value=\{{val}}
+       oninput=\{{action (mut val) value="target.value"}}&gt;{{/code-block}}
 {{/db-slide}}

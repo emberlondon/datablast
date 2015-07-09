@@ -1,13 +1,11 @@
 {{#db-slide}}
-  {{#code-block language="handlebars"}}
-  \{{salute-button action=geekSaluteTomster}}
-  {{/code-block}}
+{{#code-block language="handlebars"}}
+\{{salute-button action=geekSaluteTomster}}{{/code-block}}
 
-  {{#code-block language="javascript"}}
-  click() {
-    let returnValue = this.attrs.geekSaluteTomster(); // Plain js
-    logSalutes(returnValue);
-  }
-  {{/code-block}}
+{{#code-block language="javascript"}}
+click() {
+  let returnValue = this.attrs.geekSaluteTomster(); // Plain js
+  logSalutes(returnValue);
+}{{/code-block}}
 {{/db-slide}}
 
