@@ -20,6 +20,7 @@ Router.map(function() {
   this.route('in-the-wild');
   this.route('apple-music');
   this.route('playstation-now');
+  this.route('consul');
   this.route('cool-tools');
   this.route('ember-twiddle');
   this.route('2-0-0');
