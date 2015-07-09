@@ -17,6 +17,8 @@ Router.map(function() {
   this.route('website');
   this.route('slack');
   this.route('datablast');
+  this.route('apple-music');
+  this.route('apple-music-2');
   this.route('2-0-0-beta');
   this.route('ember-data');
   this.route('ember-data-new-store-methods');
