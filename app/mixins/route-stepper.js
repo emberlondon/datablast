@@ -26,7 +26,7 @@ export default Mixin.create({
     return this.container.lookup('controller:application');
   }),
 
-  currentIndex: computed('paths.@each', 'currentPath', function() {
+  currentIndex: computed('paths.[]', 'currentPath', function() {
     let paths        = this.get('paths');
     let currentPath  = this.get('currentPath');
 
@@ -35,14 +35,14 @@ export default Mixin.create({
 
   count: computed.readOnly('paths.length'),
 
-  prevPath: computed('paths.@each', 'currentIndex', function() {
+  prevPath: computed('paths.[]', 'currentIndex', function() {
     let paths        = this.get('paths');
     let currentIndex = this.get('currentIndex');
 
     return paths.objectAt(currentIndex - 1);
   }),
 
-  nextPath: computed('paths.@each', 'currentIndex', function() {
+  nextPath: computed('paths.[]', 'currentIndex', function() {
     let paths        = this.get('paths');
     let currentIndex = this.get('currentIndex');
 
