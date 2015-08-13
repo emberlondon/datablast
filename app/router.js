@@ -12,12 +12,14 @@ Router.map(function() {
   this.route('announcements');
   this.route('ember-london');
   this.route('ember-london-stats');
+  this.route('datablast');
+  this.route('ember-2');
+  this.route('ember-2-blog');
+  this.route('ember-2-horse');
+  this.route('lifecycle-hooks');
+  this.route('on-to-the-talks');
   this.route('upcoming-events');
   this.route('website');
-  this.route('slack');
-  this.route('forum');
-  this.route('datablast');
-  this.route('on-to-the-talks');
 });
 
 export default Router;
