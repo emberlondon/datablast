@@ -15,7 +15,6 @@ Router.map(function() {
   this.route('upcoming-events');
   this.route('website');
   this.route('slack');
-  this.route('forum');
   this.route('datablast');
   this.route('on-to-the-talks');
 });
