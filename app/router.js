@@ -7,15 +7,19 @@ var Router = Ember.Router.extend(RouteStepper, {
 });
 
 Router.map(function() {
-  this.route('line-up');
   this.route('sapient');
   this.route('announcements');
+  this.route('line-up');
+  this.route('embercamp');
+  this.route('embercamp-yehuda');
+  this.route('glimmer-2');
+  this.route('ember-cli-perf');
   this.route('ember-london');
   this.route('ember-london-stats');
   this.route('upcoming-events');
-  this.route('website');
-  this.route('slack');
-  this.route('datablast');
+  this.route('short-talks');
+  this.route('remote-talks');
+  this.route('project-night-roster');
   this.route('on-to-the-talks');
 });
 
