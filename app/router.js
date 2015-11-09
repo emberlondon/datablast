@@ -18,12 +18,15 @@ Router.map(function() {
   this.route('ember-news');
   this.route('glimmer-2');
   this.route('htmlbars-deep-dive');
+  this.route('robert-jackson');
   this.route('ember-cli-perf');
+  this.route('salesforce');
+  this.route('ember-101');
   this.route('ember-london');
   this.route('ember-london-stats');
   this.route('upcoming-events');
-  this.route('short-talks');
   this.route('remote-talks');
+  this.route('short-talks');
   this.route('project-night-roster');
   this.route('on-to-the-talks');
 });
