@@ -10,6 +10,7 @@ Router.map(function() {
   this.route('line-up');
   this.route('sapient');
   this.route('announcements');
+  this.route('code-school');
   this.route('enhance-conf');
   this.route('recap-2015');
   this.route('on-to-the-talks');
