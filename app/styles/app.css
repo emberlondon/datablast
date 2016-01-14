@@ -146,3 +146,13 @@ pre[class*="language-"] {
   width: 80%;
   margin: 1em auto;
 }
+
+ul {
+  list-style-type: none;
+
+}
+
+.codeschool-screencast-list {
+  display:table; margin:0 auto;
+  text-align: -webkit-auto;
+}
