@@ -10,13 +10,10 @@ Router.map(function() {
   this.route('line-up');
   this.route('sapient');
   this.route('announcements');
-  this.route('ember-london');
-  this.route('ember-london-stats');
-  this.route('upcoming-events');
-  this.route('website');
-  this.route('slack');
-  this.route('datablast');
+  this.route('enhance-conf');
+  this.route('recap-2015');
   this.route('on-to-the-talks');
+  this.route('upcoming-events');
 });
 
 export default Router;
