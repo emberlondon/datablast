@@ -7,16 +7,13 @@ var Router = Ember.Router.extend(RouteStepper, {
 });
 
 Router.map(function() {
-  this.route('line-up');
   this.route('sapient');
   this.route('announcements');
-  this.route('ember-london');
-  this.route('ember-london-stats');
   this.route('upcoming-events');
-  this.route('website');
-  this.route('slack');
-  this.route('datablast');
-  this.route('on-to-the-talks');
+  this.route('codeschool');
+  this.route('emberfest');
+  this.route('jazoon');
+  this.route('frontendmasters');
 });
 
 export default Router;
