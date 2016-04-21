@@ -9,11 +9,12 @@ var Router = Ember.Router.extend(RouteStepper, {
 Router.map(function() {
   this.route('sapient');
   this.route('announcements');
-  this.route('upcoming-events');
   this.route('codeschool');
   this.route('emberfest');
   this.route('jazoon');
-  this.route('frontendmasters');
+  this.route('survey');
+  this.route('embercamp');
+  this.route('upcoming-events');
 });
 
 export default Router;
