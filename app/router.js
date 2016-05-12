@@ -12,12 +12,10 @@ Router.map(function() {
   this.route('announcements');
   this.route('ember-london-stats');
   this.route('upcoming-events');
-  this.route('hello');
   this.route('roster');
   this.route('embercamp');
   this.route('emberfest');
-  this.route('translation');
-  this.route('emberconf-vids');
+  this.route('zoey');
   this.route('on-to-the-talks');
 });
 
