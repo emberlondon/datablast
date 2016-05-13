@@ -15,6 +15,7 @@ Router.map(function() {
   this.route('roster');
   this.route('embercamp');
   this.route('emberfest');
+  this.route('simplabs');
   this.route('zoey');
   this.route('on-to-the-talks');
 });
