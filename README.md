@@ -37,9 +37,9 @@ Router.map(function() {
 ```hbs
 {{! app/templates/foo.hbs }}
 
-<db-slide>
+{{#db-slide}}
   Slide content here.
-</db-slide>
+{{/db-slide}}
 ```
 
 ## Adding Tweets
