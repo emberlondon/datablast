@@ -146,3 +146,21 @@ pre[class*="language-"] {
   width: 80%;
   margin: 1em auto;
 }
+
+.sticker {
+  display: flex;
+  position: absolute;
+  top: 50%; left: 50%;
+  margin-top: -220px;
+  margin-left: 400px;
+  background: yellow;
+  width: 200px; height: 200px;
+  text-align: center;
+  align-items: center;
+  align-content: center;
+  justify-content: space-around;
+  border-radius: 50%;
+  font-weight: bold;
+  transform: rotate(30deg);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, .25);
+}
