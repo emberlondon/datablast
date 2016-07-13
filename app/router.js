@@ -8,14 +8,14 @@ var Router = Ember.Router.extend(RouteStepper, {
 
 Router.map(function() {
   this.route('line-up');
-  this.route('sapient');
+  this.route('host', { path: 'sapient'});
   this.route('announcements');
-  this.route('ember-london-stats');
   this.route('upcoming-events');
   this.route('roster');
   this.route('embercamp');
+  this.route('embercamp-photo');
+  this.route('embercamp-stats');
   this.route('emberfest');
-  this.route('zoey');
   this.route('on-to-the-talks');
 });
 

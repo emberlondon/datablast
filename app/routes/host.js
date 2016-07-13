@@ -1,5 +1,5 @@
 import Ember from 'ember';
-import preloadImages from '../utils/preload-images';
+import preloadImages from 'datablast/utils/preload-images';
 
 export default Ember.Route.extend({
   preload: function() {
