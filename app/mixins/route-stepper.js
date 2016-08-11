@@ -1,5 +1,5 @@
 import Ember from 'ember';
-var { Mixin, computed, inject, keys, run } = Ember;
+const { Mixin, computed, getOwner, inject, run } = Ember;
 
 const BLACKLIST = /index|loading|error/;
 
@@ -16,7 +16,7 @@ export default Mixin.create({
   },
 
   paths: computed(function() {
-    let paths = keys(this.router.recognizer.names);
+    let paths = Object.keys(this.router.recognizer.names);
 
     paths = paths.reject(path => BLACKLIST.test(path));
 
@@ -26,7 +26,7 @@ export default Mixin.create({
   }),
 
   applicationController: computed(function() {
-    return this.container.lookup('controller:application');
+    return getOwner(this).lookup('controller:application');
   }),
 
   currentIndex: computed('paths.[]', 'currentPath', function() {
@@ -54,7 +54,7 @@ export default Mixin.create({
 
   nextRoute: computed('nextPath', function() {
     let path = this.get('nextPath');
-    return this.container.lookup(`route:${path}`);
+    return getOwner(this).lookup(`route:${path}`);
   }),
 
   prev() {
