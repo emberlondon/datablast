@@ -143,6 +143,7 @@ green-square {
 }
 
 pre[class*="language-"] {
-  width: 80%;
+  width: 80%; max-height: 20em;
   margin: 1em auto;
+  font-size: 20px;
 }

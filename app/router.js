@@ -16,6 +16,7 @@ Router.map(function() {
   this.route('website');
   this.route('slack');
   this.route('datablast');
+  this.route('glimmer-2');
   this.route('on-to-the-talks');
 });
 
