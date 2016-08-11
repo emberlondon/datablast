@@ -1,6 +1,8 @@
 import Ember from 'ember';
 var { Mixin, computed, inject, keys, run } = Ember;
 
+const BLACKLIST = /index|loading|error/;
+
 export default Mixin.create({
   keyboard: inject.service(),
 
@@ -16,7 +18,8 @@ export default Mixin.create({
   paths: computed(function() {
     let paths = keys(this.router.recognizer.names);
 
-    paths.removeObjects(['loading', 'error', 'index', 'application']);
+    paths = paths.reject(path => BLACKLIST.test(path));
+
     paths.unshiftObject('index');
 
     return paths;
