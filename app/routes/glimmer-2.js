@@ -7,7 +7,6 @@ export default Route.extend({
     let owner = getOwner(this);
     let template = owner.lookup('template:glimmer-2');
 
-    debugger;
     return {
       spec: template.spec,
       src: `{{#db-slide}}
