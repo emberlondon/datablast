@@ -12,9 +12,9 @@ Router.map(function() {
   this.route('announcements');
   this.route('ember-london');
   this.route('ember-london-stats');
+  this.route('slack');
   this.route('upcoming-events');
   // this.route('website');
-  // this.route('slack');
   // this.route('datablast');
   // this.route('glimmer-2');
   this.route('on-to-the-talks');
