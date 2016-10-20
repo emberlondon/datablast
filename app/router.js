@@ -16,6 +16,12 @@ Router.map(function() {
   this.route('website');
   this.route('slack');
   this.route('datablast');
+  this.route('ember-fest');
+  this.route('ember-conf');
+  this.route('ember-conf-cfp');
+  this.route('module-unification');
+  this.route('ember-release');
+  this.route('yarn');
   this.route('on-to-the-talks');
 });
 
