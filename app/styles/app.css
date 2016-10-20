@@ -142,3 +142,8 @@ pre[class*="language-"] {
   width: 80%;
   margin: 1em auto;
 }
+
+x-tweet-container {
+  display: flex;
+  justify-content: center;
+}
