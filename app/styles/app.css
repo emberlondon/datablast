@@ -102,10 +102,6 @@ green-square {
   height: 100%;
 }
 
-.liquid-container, .liquid-child {
-  height: 100%;
-}
-
 .demo-box {
   display: block;
   width: 100px; height: 100px;
