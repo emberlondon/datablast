@@ -74,6 +74,7 @@ x-tweet-container {
   display: block;
   position: relative;
   transform: scale(1.5);
+  transform-origin: 0 50%;
 }
 
 x-tweet p {
@@ -141,9 +142,4 @@ green-square {
 pre[class*="language-"] {
   width: 80%;
   margin: 1em auto;
-}
-
-x-tweet-container {
-  display: flex;
-  justify-content: center;
 }
