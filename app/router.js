@@ -20,6 +20,7 @@ Router.map(function() {
   this.route('ember-conf');
   this.route('ember-conf-cfp');
   this.route('module-unification');
+  this.route('module-unification-b');
   this.route('ember-release');
   this.route('yarn');
   this.route('on-to-the-talks');
